@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_HomeTeam"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/cd_home_team_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_HomeTeamName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/iv_HomeTeam"
+            app:layout_constraintStart_toStartOf="@+id/iv_HomeTeam"
+            app:layout_constraintTop_toBottomOf="@+id/iv_HomeTeam"
+            tools:text="Home Team" />
+
+        <TextView
+            android:id="@+id/tv_HomeTeamScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_HomeTeam"
+            app:layout_constraintEnd_toStartOf="@+id/tv_VS"
+            app:layout_constraintStart_toEndOf="@+id/iv_HomeTeam"
+            app:layout_constraintTop_toTopOf="@+id/iv_HomeTeam"
+            tools:text="99" />
+
+        <TextView
+            android:id="@+id/tv_VS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_versus"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_HomeTeam"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_HomeTeam" />
+
+        <ImageView
+            android:id="@+id/iv_AwayTeam"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/cd_away_team_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_AwayName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/iv_AwayTeam"
+            app:layout_constraintStart_toStartOf="@+id/iv_AwayTeam"
+            app:layout_constraintTop_toBottomOf="@+id/iv_AwayTeam"
+            tools:text="Away Team" />
+
+        <TextView
+            android:id="@+id/tv_AwayScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_AwayTeam"
+            app:layout_constraintEnd_toStartOf="@+id/iv_AwayTeam"
+            app:layout_constraintStart_toEndOf="@+id/tv_VS"
+            app:layout_constraintTop_toTopOf="@+id/iv_AwayTeam"
+            tools:text="99" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
